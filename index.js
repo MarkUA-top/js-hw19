@@ -2,7 +2,6 @@
 const modalButO = document.querySelector('.buttonO')
 const modalButC = document.querySelector('.buttonC')
 const modalBack = document.querySelector('.backdrop')
-const modalBackС = document.querySelector('.js-backdrop')
 
 
 modalButO.addEventListener('click', (event) => {
@@ -19,10 +18,13 @@ modalButC.addEventListener('click', (event) => {
 
 // Task 2
 
-modalBackС.addEventListener('click', (event) => {
-  modalBack.style.opacity = 0;
-  modalBack.style.visibility = 'hidden';
-  modalBack.style.pointerEvents = 'none';
+modalBack.addEventListener('click', (event) => {
+  if (event.target === modalBack) {
+    modalBack.style.opacity = 0;
+    modalBack.style.visibility = 'hidden';
+    modalBack.style.pointerEvents = 'none';
+  }
+
 });
 
 // Task 3
